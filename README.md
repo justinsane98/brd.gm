@@ -15,7 +15,7 @@ BoaRD.GaMe aims to be a slimmer read-only counterpart to boardgamegeek.com
 
 ## Todo
 - toggle text and thumbnail views in results pages
-- boardgame page
+- boardgame page (game route example /g/arkham-horror)
   - large background image in header
   - smaller thumbnail of cover
   - rating
@@ -25,7 +25,7 @@ BoaRD.GaMe aims to be a slimmer read-only counterpart to boardgamegeek.com
   - maybe more images
 - integrate search into fixed header
 - account for no results being returned from API
-- refactor /game to /games (individual game pages should be something like /g/arkham-horror)
+- refactor /game to /games
 
 ## Special Thanks
 - [Board Game Geek](http://boardgamegeek.com)
