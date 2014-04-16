@@ -1,5 +1,11 @@
-<ul>
-{{#each}}
-  <li>{{this}}</li>
-{{/each}}
-</ul>
+<form {{action 'searchByUser' on="submit"}} class="bg-search-form">
+  <h3>Browse a collection</h3>
+  {{input class="bg-search-input" value=username placeholder="BGG Username"}}
+  <button class="bg-search-button">browse</button>
+</form>
+
+<form {{action 'searchByGame' on="submit"}} class="bg-search-form">
+  <h3>Find a Boardgame</h3>
+  {{input class="bg-search-input" value=boardgame placeholder="Boardgame Name"}}
+  <button class="bg-search-button">search</button>
+</form>

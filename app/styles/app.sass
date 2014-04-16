@@ -1,0 +1,165 @@
+// COLORS
+$slate-blue: #556270
+$dark-blue: #1C3249
+$white: rgba(255,255,255,1)
+$black: rgba(0,0,0,1)
+$green: #6A6E29
+$peach: #D6BAAC
+$brownish: #817068
+
+// DIMENSIONS
+$input-height: 40px
+$input-padding: 15px
+$grid-offset: 4px
+$nav-height: 60px
+$radius: 5px
+
+// GRID
+$spacing-s: 10px
+$spacing-m: 20px
+$spacing-l: 40px
+
+// FONTS
+$helvetica: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif
+$font-xs: 10px
+$font-s: 12px
+$font-m: 14px
+$font-l: 16px
+$font-xl: 18px
+$font-xxl: 20px
+$font-xxxl: 22px
+$font-dice: 200px
+
+// GENERICS
+*,
+*:before,
+*:after
+  box-sizing: border-box
+
+body
+  font-family: $helvetica
+  font-size: $font-m
+  padding-top: $nav-height
+  background: #D3D4B6
+h1,
+h2,
+h3
+  margin: $spacing-s 0
+  padding: 0
+  color: $dark-blue
+h3
+  font-size: $font-xxxl
+a
+  text-decoration: none
+input,
+button
+  height: $input-height
+  padding: 0 $input-padding
+  border: 0
+  font-size: $font-l
+  border-radius: $radius
+  margin-bottom: $spacing-s
+button
+  background: $green
+  color: $white
+  margin: 0
+
+// UTILS
+@mixin clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+// GLOBAL
+nav
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 2
+  line-height: $nav-height
+  height: $nav-height
+  padding: 0 5%
+  background-color: $slate-blue
+  box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.5)
+  border-bottom: 1px solid rgba($white,0.25)
+  a
+    color: $white
+
+// COLLECTION
+.collection
+  +clearfix
+  background-color: $white
+  margin-top: -$grid-offset
+  .bg
+    display: inline-block
+    position: relative
+    width: 32.75%
+    float: left
+    margin: $grid-offset $grid-offset 0 0
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    text-indent: -9999px
+    overflow: hidden
+    &:before
+      content: ''
+      display: block
+      padding-top: 100%
+    &:nth-of-type(3n+3)
+      margin-right: 0
+
+// SEARCH
+.bg-search-form
+  padding: 5%
+  border-bottom: 1px solid rgba($black, 0.05)
+  &:last-of-type
+    border-bottom: none
+.bg-search-input
+  width: 100%
+  height: $input-height
+  background: rgba($white, 0.5)
+
+
+// LOADING
+.loading
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: $peach
+  color: rgba($brownish,0.3)
+  .side
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-top: -$font-dice/2
+    margin-left: -$font-dice/2
+    font-size: $font-dice
+    background: $peach
+    opacity: 0
+    -webkit-animation: loading 1.8s linear infinite
+    &:nth-child(1)
+      -webkit-animation-delay: 0
+    &:nth-child(2)
+      -webkit-animation-delay: 0.3s
+    &:nth-child(3)
+      -webkit-animation-delay: 0.6s
+    &:nth-child(4)
+      -webkit-animation-delay: 0.9s
+    &:nth-child(5)
+      -webkit-animation-delay: 1.2s
+    &:nth-child(6)
+      -webkit-animation-delay: 1.5s
+
+@-webkit-keyframes loading
+  0%
+    opacity: 0
+  50%
+    opacity: 1
+  100%
+    opacity: 0
