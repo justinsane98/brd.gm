@@ -2,7 +2,8 @@ var Router = Ember.Router.extend();
 
 Router.map(function() {
   this.resource('collection', { path: '/collection/:username'});
-  this.resource('game', { path: '/game/:boardgame'});
+  this.resource('games', { path: '/games/:boardgameName'});
+  this.resource('game', { path: '/game/:boardgameId'});
   this.route('search');
 });
 

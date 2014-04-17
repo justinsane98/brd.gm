@@ -5,7 +5,13 @@
 </form>
 
 <form {{action 'searchByGame' on="submit"}} class="bg-search-form">
-  <h3>Find a Boardgame</h3>
-  {{input class="bg-search-input" value=boardgame placeholder="Boardgame Name"}}
+  <h3>Search for a boardgame</h3>
+  {{input class="bg-search-input" value=boardgameName placeholder="Boardgame Name"}}
+  <button class="bg-search-button">search</button>
+</form>
+
+<form {{action 'searchById' on="submit"}} class="bg-search-form">
+  <h3>View a specific boardgame</h3>
+  {{input class="bg-search-input" value=boardgameId placeholder="Boardgame ID"}}
   <button class="bg-search-button">search</button>
 </form>
